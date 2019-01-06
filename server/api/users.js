@@ -1,4 +1,4 @@
-const router = require('express').router();
+const router = require('express').Router();
 
 //INDIVIDUAL ROUTERS FOR USERS
 
@@ -22,3 +22,5 @@ router.put('/:id', async function (req, res, next){
 router.delete('./:id', async function (req, res, next){
 
 });
+
+module.exports = router;

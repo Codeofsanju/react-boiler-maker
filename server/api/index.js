@@ -1,8 +1,9 @@
-const router = require('express').router();
+const router = require('express').Router();
 
 
 //ADD ALL API ROUTES HERE
 router.use('/users', require('./users')); // EXAMPLE: matches all requests to /api/users
+
 
 
 
