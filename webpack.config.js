@@ -1,23 +1,3 @@
-// module.exports = {
-//     entry: './client/main.js',
-//     output: {
-//         path: __dirname, 
-//         filename: './public/bundle.js'
-//     },
-//     mode: 'development',
-//     devtool: 'source-maps',
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.js$/,
-//                 exclude: /node_modules/,
-//                 use: {
-//                     loader: 'babel-loader'
-//                 }
-//             }
-//         ]
-//     }
-// };
 const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
@@ -40,6 +20,14 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      // use the style-loader/css-loader combo for anything matching the .cc extension
+      {
+          test: /\.css$/,
+          use: [
+              'style-loader',
+              'css-loader'
+          ]
       }
     ]
   }
